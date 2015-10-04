@@ -1,0 +1,147 @@
+body{
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+	background-color: #DF0101;
+	height: 80px;
+	padding-left: 20px;
+	font-size: 35px;
+	line-height: 80px;
+	color: wheat;
+	font-weight: bold;
+	position: fixed;
+	width: 100%;
+	margin: -10px 0px 0px;
+	z-index: 10;
+}
+
+.page-header {
+	height: 80px;
+	padding-left: 10px;
+	font-size: 30px;
+	line-height: 80px;
+	margin: 80px 0px 10px !important;
+}
+
+.contacts-list {
+	margin-top: 10px;
+}
+
+.contact-box {
+	display: table;
+	position: relative;
+	border-color: #DF0101;
+	border-style: solid;
+	border-radius: 5px;
+	margin: 10px;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+.person-image {
+	/*background-image: url("/images/person.png");*/
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	display: inline-block;
+}
+
+#contactForm .person-image {
+	/*background-image: url("/images/person.png");*/
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	display: inline-block;
+}
+
+.person-name {
+	vertical-align: middle;
+    width: 240px;
+    display: table-cell;
+    padding: 0px 5px;
+}
+
+.person-remove {
+	background-image: url("/images/delete.png");
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: table-cell;
+	position: absolute;
+	top: 30%;
+	left: 85%;
+	cursor: pointer;
+}
+.person-edit {
+	background-image: url("/images/edit_user.png");
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: table-cell;
+	position: absolute;
+	top: 30%;
+	left: 75%;
+	cursor: pointer;
+}
+
+.page-icon {
+	float: right;
+	padding-right: 10px;
+	cursor: pointer;
+	font-size: 25px;
+	text-decoration: underline;
+}
+
+.add-contact-img {
+	width: 60px;
+	height: 60px;
+}
+
+.contactsSearch {
+	margin: 5px;
+	height: 50px;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 2;
+    color: #FFF;
+    cursor: default;
+    background-color: #DF0101;
+    border-color: #DF0101;
+}
+
+.pagination > li > a, .pagination > li > span {
+	color: #DF0101;
+}
+.pagination {
+	margin: 0px !important;
+}
+
+.contacts-container {
+	height: 500px;
+	overflow-y: auto;
+}
+
+.search-input {
+	width: 150px;
+	float: right;
+	height: 28px;
+}
+
+.items-per-page {
+	float: right;
+}
+
+.error {
+	float: right;
+	color: red;
+}
+
+.number-input {
+	width: 60px;
+}

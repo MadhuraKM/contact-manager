@@ -1,0 +1,31 @@
+{
+  "name": "RedMart_ContactManager",
+  "version": "0.1",
+  "description": "Contact Manager",
+  "main": "index.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Contact",
+    "Contacts",
+    "ContactManager"
+  ],
+  "authors": [
+    "Madhura"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-local-storage": "~0.2.2",
+    "angular-mocks": "~1.4.7"
+  }
+}

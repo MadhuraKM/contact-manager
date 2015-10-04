@@ -1,0 +1,37 @@
+<div class="row contacts-list" ng-controller="contactsController">
+	<div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 ">
+		<div class="col-md-12 page-header">
+			<span>Contacts List</span>
+			<span class="page-icon" ng-click="addContact()"><img class="add-contact-img" title="Add Contact" src="images/person-add.png"/></span>
+		</div>
+		<div class="contactsSearch">
+			<dir-pagination-controls class="col-md-5 col-sm-4 col-xs-12"
+		        max-size="pageSize"
+		        direction-links="true"
+		        boundary-links="true" >
+		    </dir-pagination-controls>
+
+	        <div class="col-md-2 col-sm-3 col-xs-4 pull-right">
+	            <input type="text" class="search-input form-control" ng-model="search" placeholder="Search">
+	        </div>
+
+		    <div class="col-md-5 col-sm-5 col-xs-8 pull-right">
+              <div class="items-per-page">
+	              <label>Items Per Page:</label>
+	              <input type="number" class="number-input" min="12" max="20" ng-model="pageSize">
+
+              </div>
+            </div>
+			
+	    </div>
+	    <div class="col-md-12 contacts-container">
+			<div class="col-md-3 col-sm-5 col-xs-10 contact-box" dir-paginate="contact in contacts.slice().reverse()|filter:search|itemsPerPage:pageSize">
+				<span class="person-image"><img class="person-image" ng-src="{{contact.image?contact.image: 'images/person.png'}}"/></span>
+				<span class="person-name">{{contact.name}}<br/>{{contact.phone}}</span>
+				<a class="person-edit" title="Edit Contact" ng-click="editContact(contact)"></a>
+				<span class="person-remove" title="Delete Contact" ng-click="deleteContact(contact)"></span>
+			</div>
+		</div>
+	</div>
+
+</div>

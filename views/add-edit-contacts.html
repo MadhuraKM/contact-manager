@@ -1,0 +1,53 @@
+<div class="row" ng-controller="addEditController">
+	<div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 ">
+		<div class="page-header">
+			<span>{{operation}} Contact</span>
+			<a ng-click="backToList()" class="page-icon">Back to Contacts</a>
+		</div>
+		
+	</div>
+	<div class="row">
+        <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offeset-1">
+        	<form id="contactForm" name="contactForm" ng-submit="save()" noValidate>
+        		<div class="col-md-3 col-sm-5 col-xs-12">
+        			<img class="person-image" ng-src="{{image?image: 'images/person.png'}}"/>
+					<input type="file" accept="image/*" ng-file-select="onFileSelect($files)" >
+					<!--<b>Preview:</b><br />
+					<i ng-hide="imageSrc">No image choosed</i>
+					<img ng-src="{{imageSrc}}" /><br/>
+					{{imageSrc}}
+					<b>Progress:</b>
+					<progress value="{{progress}}"></progress>-->
+				</div>
+	        	<div class="col-md-5 col-sm-7 col-xs-12">
+	        		<div>
+	        			<input type="text" name="name" class="form-control input-sm" ng-model="name" ng-pattern="/^[a-zA-Z ]{3,20}$/" placeholder="Enter Your name.." required />
+	                    <span class="error" ng-show="contactForm.$submitted">
+	                        <span class="error" ng-show="contactForm.name.$error.required">Please enter name</span>
+	                        <span class="error" ng-show="contactForm.name.$error.pattern">Please enter name with 3-20 alphabets</span>
+	                    </span>
+	        		</div><br/>
+	        		<div>
+	        			<input type="text" name="phone" class="form-control input-sm" ng-model="phone" ng-pattern="/^[0-9]{10,15}$/" placeholder="Enter Your Phone No.." required />
+	                    <span class="error" ng-show="contactForm.$submitted">
+	                        <span class="error" ng-show="contactForm.phone.$error.required">Please Enter Phone No</span>
+	                        <span class="error" ng-show="contactForm.phone.$error.pattern">Please enter valid PhoneNo with 10-15 digits</span>
+	                    </span>
+	        		</div><br/>
+	        		<div>
+	        			<input type="email" name="email" rows="3" class="form-control input-sm" ng-model="email" ng-pattern="/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/" placeholder="Enter Your email.." required/>
+	                    <span class="error" ng-show="contactForm.$submitted">
+	                        <span class="error" ng-show="contactForm.email.$error.required">Please enter email</span>
+	                        <span class="error" ng-show="contactForm.email.$error.pattern">Please enter valid email</span>
+	                    </span>
+	        		</div><br/>
+	        		<div>
+	        			<label> </label>
+	        			<button type="submit" class="btn btn-primary">Submit</button>
+	        		</div>
+        		</div>
+        	</form>
+        </div>
+    </div>
+
+</div>
