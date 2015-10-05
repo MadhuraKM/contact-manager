@@ -8,3 +8,5 @@ Modified data persists only in the session as data is read from json initially a
 and there in no database integration.
 
 Responsive designing is supported with bootstrap library.
+
+Application can be accessed at http://test1app.uphero.com/.
