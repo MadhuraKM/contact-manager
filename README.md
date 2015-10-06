@@ -9,4 +9,4 @@ and there in no database integration.
 
 Responsive designing is supported with bootstrap library.
 
-Application can be accessed at http://test1app.uphero.com/.
+Demo : https://madhurakm.github.io/#/contacts
